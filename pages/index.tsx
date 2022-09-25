@@ -10,6 +10,18 @@ const Home: NextPage = () => {
   return (
     <>
       <Script src="https://www.googleoptimize.com/optimize.js?id=OPT-TCJW3FJ" />
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-E83JP7R87D"
+        id="google-tagmanager"
+        dangerouslySetInnerHTML={{
+          __html: `window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-E83JP7R87D');`,
+        }}
+        strategy="afterInteractive"
+      />
       <Flex
         w="100%"
         h="100%"
